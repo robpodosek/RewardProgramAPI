@@ -2,6 +2,7 @@ package com.charter.rewardprogram.service;
 
 import com.charter.rewardprogram.entity.Transaction;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import java.math.BigDecimal;
 
@@ -10,7 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest()
 public class RewardsServiceTest {
 
-    private final RewardsServiceImpl rewardsService = new RewardsServiceImpl();
+    @Autowired
+    private RewardsService rewardsService;
 
     /*
      * A customer receives 2 points for every dollar spent over $100 in each
